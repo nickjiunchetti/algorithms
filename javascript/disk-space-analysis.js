@@ -1,5 +1,12 @@
 // find the maximum value, of the minimum value of each group
 
+/*
+input:
+(3, [8, 2, 4, 6, 7, 9])
+
+output:
+6
+*/
 function segment(x, computersSpace) {
   let winner = 0
 
