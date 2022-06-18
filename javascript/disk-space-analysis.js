@@ -1,4 +1,4 @@
-// find the maximum value, of the minimum value of each group
+// find the maximum value, of the minimum value for each group
 
 /*
 input:
@@ -7,7 +7,8 @@ input:
 output:
 6
 */
-function segment(x, computersSpace) {
+
+function segment(interval, computersSpace) {
   let winner = 0
 
   function getMin(arr) {
@@ -20,8 +21,8 @@ function segment(x, computersSpace) {
     return min
   }
 
-  for (let i = 0; i < computersSpace.length - x + 1; i++) {
-    const group = computersSpace.slice(i, i + x).sort()
+  for (let i = 0; i < computersSpace.length - interval + 1; i++) {
+    const group = computersSpace.slice(i, i + interval).sort()
 
     const min = getMin(group)
 
